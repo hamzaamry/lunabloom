@@ -1,0 +1,178 @@
+@import url('https://fonts.cdnfonts.com/css/argentum-sans');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Mulish:wght@200&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:wght@600&display=swap');
+
+
+html {
+    height: 100%;
+}
+
+body{
+    width: 100%;
+    background-image : url('../Assets/BgSignup.png'), linear-gradient(180deg, #322C6A 0%, #625d92 100%, #0F123D 98.95%);
+    background-size: cover;
+    background-blend-mode: overlay;
+    
+}
+.login-container{
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.signup-form {
+    box-sizing: border-box;
+    background:  rgba(15, 18, 61, 0.7 );
+    box-shadow: 0px 6px 75px rgba(0, 0, 0, 0.07);
+    backdrop-filter: blur(22.5px);
+    border-radius: 10px;
+    float: right;
+    width: 400px;
+    height: 550px;
+    top: 277px;
+    left: 66px;
+    
+    margin-right: 100px;
+
+}
+
+.username ,
+.pass ,
+.uname{
+    background: #34375C;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid rgba(206, 206 , 206 , 0.28);
+    
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.title {
+    font-family: 'Argentum Sans', sans-serif;
+    font-size: 25px;
+    margin-bottom: 70px;
+    padding-top: 30px;
+    
+    width: 170px;
+    height: 54px;
+   
+  }
+
+
+input[type=text] ,
+input[type=password] {
+
+    box-sizing: border-box;
+    background: #34375C;
+
+    border: 1px solid rgba(206, 206, 206, 0.28);
+    border-radius: 5px;
+    outline: none;
+
+    height: 40px;
+    width: 305px;
+    
+
+    color: white;
+    font-size: 18px;
+
+    margin: 0 auto;
+    display: block;
+
+}
+
+.input-container label {
+    text-align: left;
+    font-family: 'Inter';
+    font-size: 15px;
+    font-weight: 200;
+    line-height: 17px;
+    margin-left: 15px;
+    display: block;
+  }
+
+  .luna__text{
+    float: left;
+    width: 50%;
+  }
+
+  .submit-btn {
+    background: rgba(85, 183, 215, 1);
+    color: white;
+    border-radius: 3px;
+    width: 300px;
+    height: 40px;
+    font-family: 'Inter';
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 30px;
+    cursor: pointer;
+  }
+
+  .above-input{
+    display: flex;
+    justify-content: center;
+    margin: 40px;
+  }
+
+
+  .signup-link{
+    font-family: 'Inter';
+    font-style: normal;
+    font-size: 15px;
+    line-height: 24px;
+    font-weight: 200;
+    margin-top: 15px;
+    margin-bottom: 20px;
+  }
+
+  .terms p{
+    width: 350px;
+    
+    font-size: 14px;
+    font-family: 'Inter';
+    font-weight: 200;
+    line-height: 24px;
+    text-align: left;
+
+    margin-left: 45px;
+    margin-right: auto;
+    margin-bottom: 20px;
+    margin-top:20px ;
+  }
+
+  .terms {
+    text-align: center;
+  }
+
+  .terms a ,
+  .signup-link a {
+    color: rgba(85, 183, 215, 1) ;
+    text-decoration:underline;
+  }
+
+  @media screen and (max-width: 768px){
+
+    .luna__text{
+      display: none;
+    }
+
+    .signup-form {
+      justify-content: center;
+      align-items: center;
+      margin: auto;
+    }
+ 
+  }

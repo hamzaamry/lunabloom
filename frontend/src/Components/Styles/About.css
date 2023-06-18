@@ -1,0 +1,6 @@
+.about-container{
+    background: rgba(15, 18, 61, 1);
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+}

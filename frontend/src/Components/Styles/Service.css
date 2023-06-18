@@ -1,0 +1,220 @@
+@import url('https://fonts.cdnfonts.com/css/argentum-sans');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Mulish:wght@200&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:wght@600&display=swap');
+
+.Services-container{
+    background: rgba(15, 18, 61, 1);
+    position: relative;
+    z-index: 1;
+    flex-direction: column;
+    background-size: cover;
+   
+}
+
+.Services{
+    flex-direction: column;
+    background: rgba(15, 18, 61, 1);
+    background-size: cover;
+    height: auto;
+    position: relative;
+}
+
+.HeroService-section{
+    
+    color: white ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 70vh; 
+}
+
+.HeroS-title{
+    font-family: 'Argentum Sans', sans serif;
+    padding-bottom: 20px;
+    font-size: 45px;
+}
+
+.HeroS-p{
+    font-family: 'Inter' ;
+    font-size: 25px;
+}
+
+
+
+.Service2-title,
+.Service3-title,
+.Service4-title,
+.Service1-title{
+    font-family: 'Argentum Sans', sans serif;
+    font-weight: bold;
+    font-size: 40px;
+    width: 100%; 
+    padding-bottom: 30px;
+}
+
+
+.Service2-p,
+.Service3-p,
+.Service4-p,
+.Service1-p{
+    font-size: 18px;
+    width: 80vh;
+    font-family: 'Inter';
+
+}
+
+
+.Service1-container,
+.Service2-container,
+.Service3-container,
+.Service4-container {
+    position:relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    color: white;
+    
+  }
+
+
+  @media (max-width: 768px) {
+    .Service4-container,
+    .Service3-container,
+    .Service2-container,
+    .Service1-container {
+      flex-direction: column;
+      padding: 20px;
+    }
+    
+    .Service4-description,
+    .Service3-description,
+    .Service2-description,
+    .Service1-description {
+      text-align: center;
+    }
+    .Service4-p,
+    .Service3-p,
+    .Service2-p,
+    .Service1-p {
+      width: 500px;
+    }
+
+
+
+    .HeroService-section {
+        height: 50vh;
+        padding: 20px;
+      }
+    
+      .HeroS-title {
+        font-size: 30px;
+        text-align: center;
+      }
+    
+      .HeroS-p {
+        font-size: 20px;
+        text-align: center;
+      }
+
+  }
+
+  @media (min-width: 768px) {
+
+        .Service4-container,
+        .Service3-container,
+        .Service2-container,
+        .Service1-container {
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          padding: 60px;
+        }
+        
+        .Service4-description,
+        .Service3-description,
+        .Service2-description,
+        .Service1-description {
+          width: 50%;
+          padding-right: 60px;
+        }
+      
+        .Service4-title,
+        .Service3-title,
+        .Service2-title,
+        .Service1-title {
+          font-size: 60px;
+        }
+      
+        .Service4-p,
+        .Service3-p,
+        .Service2-p,
+        .Service1-p {
+          font-size: 24px;
+        }
+      
+        .artguy,
+        .blusky,
+        .greenGirl,
+        .violet {
+          width: 40%;
+          max-height: 500px;
+        }
+      
+
+
+    .HeroService-section {
+      height: 80vh;
+      padding: 40px;
+    }
+  
+    .HeroS-title {
+      font-size: 60px;
+      text-align: center;
+    }
+  
+    .HeroS-p {
+      font-size: 30px;
+      text-align: center;
+    }
+  }
+
+  @media (min-width: 576px) and (max-width: 991px) {
+    .Service4-container,
+    .Service3-container,
+    .Service2-container,
+    .Service1-container {
+      flex-direction: column;
+      justify-content: center;
+      padding: 40px;
+    }
+    
+    .Service4-description,
+    .Service3-description,
+    .Service2-description,
+    .Service1-description {
+      width: 100%;
+      padding-right: 0;
+      text-align: center;
+    }
+    
+    .Service4-p,
+    .Service3-p,
+    .Service2-p,
+    .Service1-p {
+      font-size: 18px;
+    }
+    
+    .artguy,
+    .blusky,
+    .greenGirl,
+    .violet {
+      width: 80%;
+      max-height: 300px;
+      margin-top: 30px;
+    }
+  }
+  
+  
+  
