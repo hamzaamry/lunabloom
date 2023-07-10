@@ -11,13 +11,8 @@ import SignUp from "./Components/Signing/SignUp";
 import Form from "./Components/Form/Form";
 import Results from './Pages/Results'
 
-import { useState } from "react";
-
 const App = () => {
 
-  const [targetAudience, setTargetAudience] = useState("");
-  const [platformSelections, setPlatformSelections] = useState("");
-  const [contentType, setContentType] = useState("");
 
   return (
     <>
@@ -31,12 +26,7 @@ const App = () => {
           <Route path="/JoinNow" element={<Signin />} />
           <Route path="/SignUp" element={<SignUp />} />
           <Route path="/From" element={<Form />} />
-          <Route path="/Results" 
-            element={<Results
-              targetAudience={targetAudience}
-              platformSelections={platformSelections}
-              contentType={contentType}
-             />} />
+          <Route path="/Results" element={<Results />} />
         </Routes>
       </Router>
     </>
