@@ -32,7 +32,7 @@ const Form = () => {
       navigate("/results");
     } catch (error) {
       // Handle error
-      console.error(error);
+      console.error(error); 
       toast.error("Something went wrong.");
     }
   };

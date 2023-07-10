@@ -1,0 +1,14 @@
+/* ButtonStyles.css */
+
+.centered-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .getdata-btn {
+    font-size: 24px;
+    padding: 16px 32px;
+  }
+  

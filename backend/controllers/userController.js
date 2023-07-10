@@ -87,7 +87,6 @@ const logoutUser = asyncHandler( async (req , res) => {
 // chatGPT controller 
 //route   POST /api/users/results
 
-
 const results = asyncHandler(async (req, res) => {
 
     const openai = new OpenAIApi (new Configuration({
@@ -110,20 +109,6 @@ const results = asyncHandler(async (req, res) => {
         
          //Prepare the input prompt for the chatGPT API request
         const prompt = `Domain: ${domain}\nDescription: ${description}\nProducts: ${products}\nGoals: ${goals}\nResources: ${resources}\n`;
-
-
-        //Generate Trending Topics 
-        const trendTopicsPrompt = `${prompt} , what are the upcoming trends based on these informations `;
-
-        const trendTopicsResponse = await openai.createChatCompletion({
-            model: 'gpt-3.5-turbo' ,
-            messages: [{ role: 'user' , content: `${trendTopicsPrompt}`}]
-        })
-
-            const trendTopics = trendTopicsResponse.data.choices[0].message.content
-            console.log(trendTopics)
-
-
 
         //Generate target audiance
         const targetAudiencePrompt = `${prompt} , what is the target audiance based on these informations `;
@@ -159,12 +144,16 @@ const results = asyncHandler(async (req, res) => {
             })
                 const contentType = contentTypeResponse.data.choices[0].message.content
                 console.log(contentType)
-    
-            res.status(200).json({
-                targetAudience,
-                platformSelections,
-                contentType,
-              });
+            
+
+                const data = {
+                    targetAudience: targetAudience,
+                    platformSelections: platformSelections,
+                    contentType: contentType,
+                  };
+
+
+            res.status(200).json(data);
 
 
     } catch {

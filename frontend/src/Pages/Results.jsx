@@ -1,42 +1,22 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
+import React from 'react'
+import axios from 'axios'
+import './btn.css'
+const results = () => {
 
-const Results = () => {
-  const [data, setData] = useState('');
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await axios.get('http://localhost:5000/api/users/results');
-        setData(response.data);
-        console.log('........data.........')
-        console.log(response.data)
-      } catch (error) {
-        console.error(error);
-      }
-    };
-
-    fetchData();
-  }, []);
+  const getData = () => {
+    axios.get('http://localhost:5000/api/users/results')
+    .then(res => {
+      console.log(res)
+    }).catch(err => {
+      console.log(err)
+    })
+  }
 
   return (
     <div>
-      {data ? (
-        <div>
-          <h2>Target Audience:</h2>
-          <p>{data.targetAudience}</p>
-
-          <h2>Platform Selections:</h2>
-          <p>{data.platformSelections}</p>
-
-          <h2>Content Type:</h2>
-          <p>{data.contentType}</p>
-        </div>
-      ) : (
-        <p>Loading...</p>
-      )}
+      <button className="getdata-btn" onClick={getData}>Get Data</button>
     </div>
-  );
-};
+  )
+}
 
-export default Results;
+export default results
